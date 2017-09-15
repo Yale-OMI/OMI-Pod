@@ -1,7 +1,9 @@
 # OMI-Pod
-Code for the Yale OMI Pod workshop on 9/17/17
+Code for the Yale OMI Pod workshop on 9/21/17
 
-![diagram of circuit](pod_diagram.png)
+[Event Page](https://www.facebook.com/events/1058338124303703/)
+
+![diagram of setup](setup_diagram.png)
 
 TODO 
 
@@ -10,6 +12,8 @@ TODO
 
 
 ## The Pod
+
+![picture of the poc](pod_pic.jpg)
 
 the pod directory has the code that goes on the Arduino. Edit this with the Arduino IDE
 
