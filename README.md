@@ -1,9 +1,10 @@
 # OMI-Pod
 Code for the Yale OMI Pod workshop on 9/17/17
 
+![diagram of circuit](pod_diagram.png)
+
 TODO 
 
-- add image of circuit
 - add picture of actual device
 - connect sensors to pi sender
 
