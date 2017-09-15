@@ -15,15 +15,14 @@ TODO
 
 ![picture of the poc](pod_pic.jpg)
 
-the pod directory has the code that goes on the Arduino. Edit this with the Arduino IDE
+The Pod directory has the code that goes on the Arduino. Edit this with the Arduino IDE.
+
+omipod-pi.scd should run on the pod to send the sensor from the arduino to any connected clients
+
+omiclient-pi.scd should run on some PC to process the sensor data coming in over the internet.
 
 ### Required Libraries
-
 
 - SFE_MMA8452Q (https://learn.sparkfun.com/tutorials/mma8452q-accelerometer-breakout-hookup-guide/example-code)
 - CmdMessenger (https://playground.arduino.cc/Code/CmdMessenger)
 
-## The Mothership
-
-The Mothership directory has the code that processes the messages recieved from the pod.
-Examples are given in both SuperCollider and PureData.
