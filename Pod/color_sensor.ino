@@ -30,6 +30,7 @@ void color_setup() {
 }
 
 void color_loop() {
+  Serial.print("/color ");
   // Setting red filtered photodiodes to be read
   digitalWrite(S2,LOW);
   digitalWrite(S3,LOW);
@@ -38,9 +39,8 @@ void color_loop() {
   //Remaping the value of the frequency to the RGB Model of 0 to 255
   frequency = map(frequency, 240,600,255,0);
   // Printing the value on the serial monitor
-  Serial.print("R= ");//printing name
   Serial.print(frequency);//printing RED color frequency
-  Serial.print("  ");
+  Serial.print(" ");
   delay(100);
 
   // Setting Green filtered photodiodes to be read
@@ -51,9 +51,8 @@ void color_loop() {
   //Remaping the value of the frequency to the RGB Model of 0 to 255
   frequency = map(frequency, 300,805,255,0);
   // Printing the value on the serial monitor
-  Serial.print("G= ");//printing name
   Serial.print(frequency);//printing RED color frequency
-  Serial.print("  ");
+  Serial.print(" ");
   delay(100);
 
   // Setting Blue filtered photodiodes to be read
@@ -64,8 +63,7 @@ void color_loop() {
   //Remaping the value of the frequency to the RGB Model of 0 to 255
   frequency = map(frequency, 260,720,255,0);
   // Printing the value on the serial monitor
-  Serial.print("B= ");//printing name
   Serial.print(frequency);//printing RED color frequency
-  Serial.println("  ");
+  Serial.println("");
   delay(100);
 }

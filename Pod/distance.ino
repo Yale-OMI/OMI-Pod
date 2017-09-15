@@ -23,17 +23,8 @@ void distance_setup() {
 }
 
 void distance_loop() {
-  
-  int snd;
-  snd=analogRead(0);
+  Serial.print("/distance ");
 
-  // SOUND SENSOR CODEZ
-    
-  Serial.println(snd,DEC);
-  
-  // DISTANCE SENSOR CODEZ
-
-  
   long duration, distance;
   digitalWrite(trigPin, LOW);  // Added this line
   delayMicroseconds(2); // Added this line
@@ -53,14 +44,13 @@ void distance_loop() {
     digitalWrite(led2,HIGH);
   }
   if (distance >= 200 || distance <= 0){
-    Serial.println("Out of range");
+    Serial.println("-1");
   }
   else {
     Serial.print(distance);
-    Serial.println(" cm");
+    Serial.println("");
   }
 
 
   // END DISTANCE SENSOR CODEZ
-  delay(50);
 } 

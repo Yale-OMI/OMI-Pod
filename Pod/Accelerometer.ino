@@ -40,8 +40,7 @@ MMA8452Q accel;
 //  accelerometer.
 void accel_setup()
 {
-  Serial.println("MMA8452Q Test Code!");
-  
+ 
   // Choose your adventure! There are a few options when it comes
   // to initializing the MMA8452Q:
   //  1. Default init. This will set the accelerometer up
@@ -65,6 +64,8 @@ void accel_setup()
 //  accelerometer and print it out if it's available.
 void accel_loop()
 {
+  Serial.print("/acceleration ");
+
   // Use the accel.available() function to wait for new data
   //  from the accelerometer.
   if (accel.available())
@@ -99,11 +100,11 @@ void accel_loop()
 void printAccels()
 {
   Serial.print(accel.x, 3);
-  Serial.print("\t");
+  Serial.print(" ");
   Serial.print(accel.y, 3);
-  Serial.print("\t");
+  Serial.print(" ");
   Serial.print(accel.z, 3);
-  Serial.print("\t");
+  Serial.print(" ");
 }
 
 // This function demonstrates how to use the accel.cx, accel.cy,
@@ -113,11 +114,11 @@ void printAccels()
 void printCalculatedAccels()
 { 
   Serial.print(accel.cx, 3);
-  Serial.print("\t");
+  Serial.print(" ");
   Serial.print(accel.cy, 3);
-  Serial.print("\t");
+  Serial.print(" ");
   Serial.print(accel.cz, 3);
-  Serial.print("\t");
+  Serial.print(" ");
 }
 
 // This function demonstrates how to use the accel.readPL()
@@ -133,16 +134,16 @@ void printOrientation()
   switch (pl)
   {
   case PORTRAIT_U:
-    Serial.print("Portrait Up");
+    Serial.print("PortraitUp");
     break;
   case PORTRAIT_D:
-    Serial.print("Portrait Down");
+    Serial.print("PortraitDown");
     break;
   case LANDSCAPE_R:
-    Serial.print("Landscape Right");
+    Serial.print("LandscapeRight");
     break;
   case LANDSCAPE_L:
-    Serial.print("Landscape Left");
+    Serial.print("LandscapeLeft");
     break;
   case LOCKOUT:
     Serial.print("Flat");
