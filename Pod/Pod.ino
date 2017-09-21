@@ -17,5 +17,6 @@ void loop() {
   distance_loop();
   color_loop();
   sound_loop();
+  light_loop();
 
 }
